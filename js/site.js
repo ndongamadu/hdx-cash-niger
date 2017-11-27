@@ -12,7 +12,7 @@ var config = {
     mechanismField: "Delivery mechanism",
     conditonalityField: "Conditionality",
     restrictionField: "Restriction",
-    ruralField: "Rural/Urban",
+    statusField: "Status",
     transferValue: "beneficiaries",
     estimatedField: "Total amount"
 };
@@ -70,7 +70,7 @@ function generate3WComponent(config, data, geom) {
         return d[config.restrictionField];
     });
     var dimRuralUrban = cf.dimension(function (d) {
-        return d[config.ruralField];
+        return d[config.statusField];
     });
 
     // var whoGroup = whoDimension.group();
